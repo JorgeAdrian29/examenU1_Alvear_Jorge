@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <form action="pagina.html" method="get"><br>
+
+        <label>Nombre:</label><input type="text" name="nombre" ><br>
+        <label>Apellidos:<input type="text" name="apellidos" ><br>
+        <label>Correo:<input type="email" name="Correo"><br>
+        <label>Fecha de nacimiento:<input type="date" name="Fecha"><br>
+        <label>Telefono:<input type="tel" name="Telefono"><br>
+        <label>Usuario:<input type="text" name="Usuario"><br>
+        <label>contraseña:<input type="password" name="contraseña" id="contra" onchange="funcion()"><br>
+        <label>confirmar contraseña:<input type="password"  name="confirmar contraseña"><br>
+        <input type="submit" value="registrar producto"><br>
+
+    </form>
+    <script>
+
+    function funcion(){
+        var contraseña =(document.getElementById("contra").value);
+        console.log (contraseña);
+        if (contraseña.length<5){
+            alert ("tu contraseña tiene menos de 5 caracteres, no es muy segura");
+        }else{
+            alert ("tu contraseña es segura")
+        }
+    }
+
+</script>
+
+</body>
+</html>

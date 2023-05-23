@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="mailto:20223tn039@utez.edu.mx">mandar correo</a><br>
+    <a href="tel:7772141883">numero de Telefono</a><br>
+
+    <h1 id="mensaje"></h1>
+    <h2 id="mensaje2"></h2>
+    <h2 id="edad"></h2>
+
+    <script>
+
+     getParameter = (key) => {
+         address = window.location.search;
+         ParameterList = new URLSearchParams(address);
+         return ParameterList.get(key);
+     }
+     console.log(getParameter("nombre"));
+     var nombre = (getParameter("nombre"));
+     if (nombre!=null){
+         document.getElementById("mensaje").innerHTML =  nombre;
+     }
+     console.log(getParameter("apellidos"));
+     var nombre = (getParameter("apellidos"));
+     if (nombre!=null){
+         document.getElementById("mensaje2").innerHTML =  nombre;
+     }
+
+     
+
+     var fecha = getParameter("Fecha");
+
+
+     var arreglo = fecha.split("-");
+     fecha = arreglo[0];
+
+     document.getElementById("edad").innerHTML = "tienes " + (2023 - fecha) + " años"
+
+
+
+    </script>
+    
+</body>
+</html>

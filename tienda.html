@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <!--hacer un formulario para el registro de tienda-->
+
+    <form action="#" method="get"><br>
+     <label>Nombre:</label><input type="text" name="nombre" value="adrian"><br>
+     <label>Codigo:<input type="text" name="codigo" onchange="funcion()"><br>
+     <label>Precio:<input type="number" name="precio"><br>
+     <label>Unidades de inventario:<input type="number" name="unidades de inventario"><br>
+     <label>Descripcion:<input type="text" name="descripcion"><br>
+     <input type="submit" value="registrar producto">
+    </form>
+    <a href="20223tn039@utez.edu.mx">mandar correo a jorge</a>
+    <h1 id="mensaje"></h1>
+    <script>
+        getParameter = (key) => {
+            address = window.location.search;
+            ParameterList = new URLSearchParams(address);
+            return ParameterList.get(key);
+        }
+        console.log(getParameter("nombre"));
+        var nombre = (getParameter("nombre"));
+        if (nombre!=null){
+            document.getElementById("mensaje").innerHTML = "Bienvenido " + nombre;
+        }
+
+        function funcion(){
+            alert("se cambio el imput: ");
+        }
+    </script>
+</body>
+</html>
